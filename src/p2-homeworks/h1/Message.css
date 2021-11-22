@@ -3,8 +3,13 @@
     padding: 15px;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: purple;
+}
+
+.message__sended {
+    display: flex;
 }
 
 .message__avatar {
