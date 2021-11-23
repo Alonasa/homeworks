@@ -1,3 +1,21 @@
-.someClass {
+.body {
+    background-color: #656584;
+    text-align: center;
+    text-transform: capitalize;
+}
 
+.title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.list {
+    padding: 5px;
+    margin: 0 auto;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: antiquewhite;
+    border-bottom: 1px dotted antiquewhite;
 }
