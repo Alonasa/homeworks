@@ -1,7 +1,23 @@
-.someClass {
+.body {
+    padding: 20px;
+    background-color: #4b4b7e;
+    color: antiquewhite;
+    text-align: center;
+}
 
+.title {
+    margin: 5px 0;
+    text-transform: capitalize;
+}
+
+.success {
+    border: 2px solid green;
 }
 
 .error {
     border: 1px solid red;
+}
+
+.indent {
+    padding: 20px;
 }
