@@ -1,5 +1,12 @@
-.superInput {
+.input {
+    border: 3px solid lime;
+    background: red;
+}
 
+.superInput {
+    margin: 10px;
+    border: 2px solid purple;
+    background: antiquewhite;
 }
 
 .errorInput {
