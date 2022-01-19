@@ -16,7 +16,7 @@ function App() {
           <Menu/>
           <Routes>
             <Route path="/" element={<HW1/>}>
-              HOMEPAGE
+              
             </Route>
             <Route path="/homework1" element={<HW1/>}>hi</Route>
             <Route path="/homework2" element={<HW2/>}/>

@@ -1,14 +1,15 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 export const Menu = () => {
   return (
 	<div>
 	  <nav>
-		<li><a href="/#/homework1">Homework1</a></li>
-		<li><a href="/#/homework2">Homework2</a></li>
-		<li><a href="/#/homework3">Homework3</a></li>
-		<li><a href="/#/homework4">Homework4</a></li>
-		<li><a href="/#/homework5">Homework5</a></li>
+		<Link to="/homework1"><li>Homework1</li></Link>
+		<Link to="/homework2"><li>Homework2</li></Link>
+		<Link to="/homework3"><li>Homework3</li></Link>
+		<Link to="/homework4"><li>Homework4</li></Link>
+		<Link to="/homework5"><li>Homework5</li></Link>
 	  </nav>
 	</div>
   );
