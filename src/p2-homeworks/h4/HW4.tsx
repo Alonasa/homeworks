@@ -37,7 +37,7 @@ function HW4() {
                     className={s.blue} // проверьте, рабоет ли смешивание классов
                 />
 
-                {/*----------------------------------------------------*/}
+                {/*---------------------------Работает-------------------------*/}
 
                 <SuperButton>
                     default
@@ -60,7 +60,7 @@ function HW4() {
                     checked={checked}
                     onChangeChecked={setChecked}
                 >
-                    some text {/*// этот текст попадёт в children*/}
+                    some text{text}
                 </SuperCheckbox>
 
                 {/*// onChange тоже должен работать*/}
