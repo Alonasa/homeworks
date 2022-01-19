@@ -19,3 +19,13 @@
     color: antiquewhite;
     border-bottom: 1px dotted antiquewhite;
 }
+
+.affair {
+    padding: 5px 10px;
+}
+
+.selected {
+    padding: 5px 10px;
+    background-color: blueviolet;
+    color: antiquewhite;
+}
