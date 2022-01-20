@@ -1,5 +1,6 @@
 .header {
     background-color: #4b4b7e;
+    position: relative;
 }
 
 .header__items {
@@ -17,7 +18,7 @@
     filter: contrast(30);
 }
 
-.active {
+.active, .menu__button, .menu__button__pressed {
     background-color: #17172e;
     border: 2px solid antiquewhite;
 }
@@ -34,3 +35,20 @@
     text-decoration: none;
     color: antiquewhite;
 }
+
+.menu__button, .menu__button__pressed {
+    padding: 20px;
+    margin: 0;
+    width: 140px;
+    position: static;
+    color: antiquewhite;
+}
+
+.header__items {
+    display: none;
+}
+
+.menu__button__pressed + .header__items {
+    display: flex;
+}
+
