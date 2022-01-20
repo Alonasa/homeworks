@@ -36,8 +36,7 @@ function Header() {
             4</NavLink>
           <NavLink to={PATH.PRE_JUNIOR}
                    className={(navData) => navData.isActive ? s.active : ''}>Pre
-            Junior
-                HW5</NavLink>
+            Junior</NavLink>
             </div>
           </nav>
       </div>
