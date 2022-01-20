@@ -6,19 +6,17 @@ import HW3 from '../../../p2-homeworks/h3/HW3';
 import {HashRouter, Route, Routes} from 'react-router-dom';
 import HW4 from '../../../p2-homeworks/h4/HW4';
 import HW5 from '../../../p2-homeworks/h5/HW5';
-import {Menu} from '../../../p2-homeworks/h1/Menu';
+import {Menu} from '../../../Nav/Menu';
+import {Main} from '../../../Main/Main';
 
 function App() {
     return (
       <div className={s.App}>
-        <div>react homeworks:</div>
         <HashRouter>
           <Menu/>
           <Routes>
-            <Route path="/" element={<HW1/>}>
-              
-            </Route>
-            <Route path="/homework1" element={<HW1/>}>hi</Route>
+            <Route path="/" element={<Main/>}/>
+            <Route path="/homework1" element={<HW1/>}/>
             <Route path="/homework2" element={<HW2/>}/>
             <Route path="/homework3" element={<HW3/>}/>
             <Route path="/homework4" element={<HW4/>}/>
