@@ -1,0 +1,32 @@
+.error__404 {
+    height: 100vh;
+}
+
+.error__wrapper {
+    padding: 30px;
+    animation: shake 3s infinite;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0)
+    }
+    20% {
+        transform: translateX(-30px)
+    }
+    40% {
+        transform: translateX(0)
+    }
+    60% {
+        transform: translateX(30px)
+
+    }
+}
+
+
+
+
+
+
+
+
