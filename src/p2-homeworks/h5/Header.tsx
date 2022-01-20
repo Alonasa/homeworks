@@ -9,8 +9,6 @@ function Header() {
     setActive(!active)
   }
   
-  
-  
   const styleHandler = () => {
     return active ? s.menu__button__pressed : s.menu__button
   }
@@ -21,7 +19,7 @@ function Header() {
       <nav className={s.header}>
         <div
           className={styleHandler()}
-          onClick={menuButtonHandler}>Меню уроков
+          onClick={menuButtonHandler}>Меню
         </div>
         <div className={s.header__items}>
           <NavLink to={PATH.HW1}
