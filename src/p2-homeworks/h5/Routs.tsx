@@ -6,6 +6,7 @@ import HW2 from '../h2/HW2';
 import HW3 from '../h3/HW3';
 import HW4 from '../h4/HW4';
 import Error404 from './pages/Error404';
+import {v1} from 'uuid';
 
 export const PATH = {
     PRE_JUNIOR: '/pre-junior',
@@ -20,12 +21,12 @@ function Routs() {
     return (
       <div>
           <Routes>
-              <Route path="/" element={<PreJunior/>}/>
-              <Route path={PATH.HW1} element={<HW1/>}/>
-              <Route path={PATH.HW2} element={<HW2/>}/>
-              <Route path={PATH.HW3} element={<HW3/>}/>
-              <Route path={PATH.HW4} element={<HW4/>}/>
-              <Route path={PATH.PRE_JUNIOR} element={<PreJunior/>}/>
+              <Route path="/" element={<PreJunior/>} key={v1()}/>
+              <Route path={PATH.HW1} element={<HW1/>} key={v1()}/>
+              <Route path={PATH.HW2} element={<HW2/>} key={v1()}/>
+              <Route path={PATH.HW3} element={<HW3/>} key={v1()}/>
+              <Route path={PATH.HW4} element={<HW4/>} key={v1()}/>
+              <Route path={PATH.PRE_JUNIOR} element={<PreJunior/>} key={v1()}/>
               <Route path={PATH.ERROR_404} element={<Error404/>}/>
               <Route path="*" element={<Error404/>}/>
           </Routes>

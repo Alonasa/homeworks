@@ -17,6 +17,11 @@
     filter: contrast(30);
 }
 
+.active {
+    background-color: #17172e;
+    border: 2px solid antiquewhite;
+}
+
 @media (min-width: 768px) {
     .header__items {
         width: 740px;
