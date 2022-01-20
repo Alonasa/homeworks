@@ -1,8 +1,8 @@
-.menu {
+.header {
     background-color: #4b4b7e;
 }
 
-.menu__items {
+.header__items {
     margin: 0 auto;
     padding: 20px;
     display: flex;
@@ -12,18 +12,18 @@
     box-sizing: border-box;
 }
 
-.menu__items a:hover {
+.header__items a:hover {
     background-color: #4b4b7e;
     filter: contrast(30);
 }
 
 @media (min-width: 768px) {
-    .menu__items {
+    .header__items {
         width: 740px;
     }
 }
 
-.menu__items a {
+.header__items a {
     padding: 20px;
     margin: 0 auto;
     text-decoration: none;
