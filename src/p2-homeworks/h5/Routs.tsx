@@ -7,6 +7,7 @@ import HW3 from '../h3/HW3';
 import HW4 from '../h4/HW4';
 import Error404 from './pages/Error404';
 import HW6 from '../h6/HW6';
+import HW7 from '../h7/HW7';
 
 export const PATH = {
     PRE_JUNIOR: '/pre-junior',
@@ -15,6 +16,7 @@ export const PATH = {
     HW3: '/hw3',
     HW4: '/hw4',
     HW6: '/hw6',
+    HW7: '/hw7',
     ERROR_404: '/404'
 }
 
@@ -28,6 +30,7 @@ function Routs() {
               <Route path={PATH.HW3} element={<HW3/>}/>
               <Route path={PATH.HW4} element={<HW4/>}/>
               <Route path={PATH.HW6} element={<HW6/>}/>
+              <Route path={PATH.HW7} element={<HW7/>}/>
               <Route path={PATH.PRE_JUNIOR} element={<PreJunior/>}/>
               <Route path={PATH.ERROR_404} element={<Error404/>}/>
               <Route path="*" element={<Error404/>}/>

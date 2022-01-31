@@ -42,6 +42,8 @@ function Header() {
 			  Junior</NavLink>
 			<NavLink to={PATH.HW6}
 					 className={(navData) => navDataStyleHandler(navData.isActive)}>Homework 6</NavLink>
+			<NavLink to={PATH.HW7}
+					 className={(navData) => navDataStyleHandler(navData.isActive)}>Homework 7</NavLink>
 		  </div>
 		</nav>
 	  </div>
