@@ -6,6 +6,10 @@ const arr = ['x', 'y', 'z']
 
 function HW7() {
     const [value, onChangeOption] = useState(arr[1])
+    
+    const onChange = (value: string)=> {
+      onChangeOption(value)
+    }
 
     return (
         <div>
@@ -17,7 +21,7 @@ function HW7() {
                 <SuperSelect
                     options={arr}
                     value={value}
-                    onChangeOption={onChangeOption}
+                    onChangeOption={onChange}
                 />
             </div>
             <div>
