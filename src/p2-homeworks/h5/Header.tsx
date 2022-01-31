@@ -12,7 +12,9 @@ function Header() {
   const styleHandler = () => {
 	return active ? s.menu__button__pressed : s.menu__button
   }
-  
+  const navDataStyleHandler = (navData: boolean)=> {
+	return navData ? s.active : ''
+  }
   
   return (
 	<div className={s.header}>
@@ -24,22 +26,24 @@ function Header() {
 		  </div>
 		  <div className={s.header__items}>
 			<NavLink to={PATH.HW1}
-					 className={(navData) => navData.isActive ? s.active : ''}>Homework
+					 className={(navData) => navDataStyleHandler(navData.isActive)}>Homework
 			  1</NavLink>
 			<NavLink to={PATH.HW2}
-					 className={(navData) => navData.isActive ? s.active : ''}>Homework
+					 className={(navData) => navDataStyleHandler(navData.isActive)}>Homework
 			  2</NavLink>
 			<NavLink to={PATH.HW3}
-					 className={(navData) => navData.isActive ? s.active : ''}>Homework
+					 className={(navData) => navDataStyleHandler(navData.isActive)}>Homework
 			  3</NavLink>
 			<NavLink to={PATH.HW4}
-					 className={(navData) => navData.isActive ? s.active : ''}>Homework
+					 className={(navData) => navDataStyleHandler(navData.isActive)}>Homework
 			  4</NavLink>
 			<NavLink to={PATH.PRE_JUNIOR}
-					 className={(navData) => navData.isActive ? s.active : ''}>Pre
+					 className={(navData) => navDataStyleHandler(navData.isActive)}>Pre
 			  Junior</NavLink>
 			<NavLink to={PATH.HW6}
-					 className={(navData) => navData.isActive ? s.active : ''}>Homework 6</NavLink>
+					 className={(navData) => navDataStyleHandler(navData.isActive)}>Homework 6</NavLink>
+			<NavLink to={PATH.HW7}
+					 className={(navData) => navDataStyleHandler(navData.isActive)}>Homework 7</NavLink>
 		  </div>
 		</nav>
 	  </div>

@@ -1,0 +1,16 @@
+.radio {
+    width: 25px;
+    height: 25px;
+    border: 3px solid rebeccapurple;
+    border-radius: 50%;
+    background-color: #4b4b7e;
+    appearance: none;
+    box-sizing: border-box;
+    margin: 15px 10px -5px;
+    position: relative;
+}
+
+.radio:checked {
+    border: 7px solid rebeccapurple;
+    background: goldenrod;
+}
