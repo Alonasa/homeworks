@@ -1,0 +1,20 @@
+.select {
+    width: 160px;
+    height: 40px;
+    background-color: #4b4b7e;
+    color: antiquewhite;
+    text-transform: uppercase;
+    border: 2px solid goldenrod;
+    outline: 5px blueviolet;
+    appearance: none;
+}
+
+.select option:hover {
+    background-color: #656584;
+}
+
+.select option:active {
+    font-weight: bold;
+    color: goldenrod;
+}
+
