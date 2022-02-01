@@ -40,7 +40,7 @@ function HW8() {
             {finalPeople}
 
             <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
-            <div>sort down</div>
+          <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
             check 18
 
             <hr/>
