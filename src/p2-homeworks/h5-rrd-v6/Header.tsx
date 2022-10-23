@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
+import {Sidebar} from './Sidebar';
+
 
 function Header() {
-    return (
-        <div>
-            // add NavLinks
-
-        </div>
-    )
+  return (
+	<Sidebar/>
+  )
 }
 
 export default Header
