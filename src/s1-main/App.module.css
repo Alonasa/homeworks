@@ -3,11 +3,10 @@
 }
 
 .hw {
-    padding-left: 70px;
+    padding: 0 70px;
 }
 
 .hwTitle {
-    padding-left: 70px;
     padding-top: 107px;
     padding-bottom: 10px;
     font-weight: bold;
