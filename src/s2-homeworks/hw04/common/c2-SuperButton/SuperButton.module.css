@@ -2,6 +2,7 @@
     width: 132px;
     height: 30px;
     border-radius: 3px;
+    border: inherit;
 }
 
 .disabled {
