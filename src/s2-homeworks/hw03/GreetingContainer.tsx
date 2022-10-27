@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useState} from 'react'
+import React, {ChangeEvent, KeyboardEvent, useState} from 'react'
 import Greeting from './Greeting'
 import {UserType} from './HW3'
 
@@ -37,10 +37,7 @@ export const pureOnEnter = (e: KeyboardEvent, addUser: () => void) => { // ес�
 // function GreetingContainer(props: GreetingPropsType) {
 
 // более современный и удобный для про :)
-const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
-                                                                     users,
-                                                                     addUserCallback,
-                                                                 }) => {
+const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback,}) => {
     // деструктуризация пропсов
     const [name, setName] = useState<string>('') // need to fix any
     const [error, setError] = useState<string>('') // need to fix any
@@ -70,7 +67,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
         setNameCallback={setNameCallback}
         addUser={addUser}
         onBlur={onBlur}
-        onEnter={(e)=>onEnter}
+        onEnter={(e)=>onEnter(e)}
         error={error}
         totalUsers={totalUsers}
         lastUserName={lastUserName}
