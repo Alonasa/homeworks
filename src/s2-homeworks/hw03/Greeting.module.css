@@ -21,6 +21,10 @@
 }
 
 .errorInput {
+    width: 372px;
+    min-height: 36px;
+    margin-right: 12px;
+    border-radius: 5px;
     border: 2px solid #CC0000;
 }
 
