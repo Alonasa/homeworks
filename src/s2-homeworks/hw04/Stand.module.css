@@ -1,5 +1,5 @@
 .stand {
-    margin: 50px 0;
+    margin-bottom: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,6 +12,7 @@
 }
 
 .buttons {
+    margin-top: 90px;
     width: 170px;
     display: flex;
     flex-direction: column;

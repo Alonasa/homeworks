@@ -1,4 +1,5 @@
 .input:focus {
+    outline: inherit;
 }
 
 .input {
@@ -9,12 +10,14 @@
 }
 
 .inputWrapper {
+    position: relative;
 }
 
 .superInput {
 }
 
 .errorInput {
+    border: 1px solid #CC1439;
 }
 
 .errorInput:focus {
@@ -22,5 +25,8 @@
 }
 
 .error {
-    color: #CC1439
+    color: #CC1439;
+    position: absolute;
+    top: -25px;
+    left: 0;
 }
