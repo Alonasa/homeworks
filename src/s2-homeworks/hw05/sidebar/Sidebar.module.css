@@ -1,4 +1,5 @@
 .sidebar {
+    display: none;
 }
 
 .sidebar.open {
@@ -44,15 +45,15 @@
 .close {
     background-color: inherit;
     border: none;
-    display: none;
     z-index: 110;
-}
-
-.sidebar.open > .close {
     display: block;
     position: absolute;
     top: 22px;
     left: 275px;
+}
+
+.item {
+
 }
 
 .close img {
