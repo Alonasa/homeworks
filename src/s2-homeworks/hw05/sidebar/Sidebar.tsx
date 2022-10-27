@@ -9,13 +9,8 @@ type PropsType = {
     handleClose: () => void
 }
 
-const activeStyleHandler = (active: boolean)=> {
-    return active ? s.active : ''
-}
-
 export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
-    const sidebarClass = s.sidebar
-        + (open ? ' ' + s.open : '')
+    const sidebarClass = s.sidebar + (open ? ' ' + s.open : '')
     return (
         <>
             {/*затемнение справа от открытого меню*/}
@@ -32,26 +27,23 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
 
                 <nav id={'hw5-menu'} className={s.nav}>
                     <NavLink
-                        id={'hw5-pre-junior-link'}
-                        to={PATH.PRE_JUNIOR}
-                        onClick={handleClose}
-                        className={(active)=>activeStyleHandler(active.isActive)} // делает студент
+                      id={'hw5-pre-junior-link'}
+                      to={PATH.PRE_JUNIOR}
+                      className={({isActive}) => (isActive ? s.active : '')} // делает студент
                     >
                         Pre-junior
                     </NavLink>
                     <NavLink
-                        id={'hw5-junior-link'}
-                        to={PATH.JUNIOR}
-                        onClick={handleClose}
-                        className={(active)=>activeStyleHandler(active.isActive)} // делает студент
+                      id={'hw5-junior-link'}
+                      to={PATH.JUNIOR}
+                      className={({isActive}) => (isActive ? s.active : '')} // делает студент
                     >
                         Junior
                     </NavLink>
                     <NavLink
-                        id={'hw5-junior-plus-link'}
-                        to={PATH.JUNIOR_PLUS}
-                        onClick={handleClose}
-                        className={(active)=>activeStyleHandler(active.isActive)} // делает студент
+                      id={'hw5-junior-plus-link'}
+                      to={PATH.JUNIOR_PLUS}
+                      className={({isActive}) => (isActive ? s.active : '')} // делает студент
                     >
                         Junior Plus
                     </NavLink>
