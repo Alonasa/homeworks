@@ -1,8 +1,9 @@
 .button {
-    width: 132px;
+    padding: 5px 24px;
     height: 30px;
     border-radius: 3px;
     border: inherit;
+    box-sizing: border-box;
 }
 
 .disabled {
@@ -12,7 +13,6 @@
 }
 
 .secondary {
-    width: 176px;
     color: #0066CC;
     border: 1px solid #0066CC;
 }
