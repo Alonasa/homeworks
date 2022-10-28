@@ -38,6 +38,7 @@ const HW6 = () => {
                         spanProps={{
                             id: 'hw6-editable-span',
                             defaultText: 'enter text...',
+                            style: {color: '#0080FF', paddingLeft: '14px'}
                         }}
                     />
                 </div>
