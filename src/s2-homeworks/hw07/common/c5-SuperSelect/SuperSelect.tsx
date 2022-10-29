@@ -4,6 +4,7 @@ import React, {
     ChangeEvent,
 } from 'react'
 import s from './SuperSelect.module.css'
+import {MenuItem, Select, SelectChangeEvent, SelectProps} from '@mui/material';
 
 type DefaultSelectPropsType = DetailedHTMLProps<
     SelectHTMLAttributes<HTMLSelectElement>,
@@ -13,43 +14,51 @@ type DefaultSelectPropsType = DetailedHTMLProps<
 type SuperSelectPropsType = DefaultSelectPropsType & {
     options?: any[]
     onChangeOption?: (option: any) => void
+    value? : string | undefined
+    id: string
 }
 
 const SuperSelect: React.FC<SuperSelectPropsType> = ({
-    options,
+    
+                                                       options,
     className,
     onChange,
     onChangeOption,
+    value,
+    id,
     ...restProps
 }) => {
     const mappedOptions: any[] = options
         ? options.map((o) => (
-              <option
+              <MenuItem
                   id={'hw7-option-' + o.value}
                   className={s.option}
                   key={o.id}
                   value={o.value}
+                  style={{border: '1px solid #C2C2C2'}}
               >
                   {o.value}
-              </option>
+              </MenuItem>
           ))
         : []
 
-    const onChangeCallback = (e: ChangeEvent<HTMLSelectElement>) => {
-        onChange && onChange(e)
-        onChangeOption && onChangeOption(e.currentTarget.value)
+    const onChangeCallback = (e: SelectChangeEvent) => {
+        onChangeOption && onChangeOption(e.target.value)
     }
 
     const finalSelectClassName = s.select + (className ? ' ' + className : '')
-
-    return (
-        <select
-            className={finalSelectClassName}
-            onChange={onChangeCallback}
-            {...restProps}
-        >
-            {mappedOptions}
-        </select>
+  
+  return (
+            <Select
+              className={finalSelectClassName}
+              onChange={onChangeCallback}
+              id={id}
+              value={value}
+              style={{padding: '0'}}
+              size={'small'}
+            >
+                {mappedOptions}
+            </Select>
     )
 }
 
