@@ -1,28 +1,27 @@
 .item {
-}
-
-td {
-    padding: 17px;
     border-bottom: 1px solid #E5E5E5;
 }
 
 .item:last-of-type {
+    border: none;
 }
 
 .users {
     min-width: 600px;
+    border-collapse: collapse;
     border-spacing: 0;
 }
 
 .buttonsContainer {
     margin: 34px 0 18px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .container {
-   margin-bottom: 30px;
-}
-
-thead {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 .thead {
@@ -30,6 +29,7 @@ thead {
 }
 
 .nameCol {
+    padding: 17px;
     width: 50%;
 }
 
