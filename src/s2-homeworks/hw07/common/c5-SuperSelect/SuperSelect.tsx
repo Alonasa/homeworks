@@ -55,6 +55,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
               id={id}
               value={value}
               style={{padding: '0'}}
+              size={'small'}
             >
                 {mappedOptions}
             </Select>

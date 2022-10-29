@@ -1,5 +1,6 @@
 .button {
     padding: 5px 24px;
+    margin-right: 10px;
     height: 30px;
     border-radius: 3px;
     border: inherit;
@@ -28,17 +29,14 @@
 }
 
 .default:hover {
-    width: 167px;
     background-color: #0080FF;
 }
 
 .red:hover {
-    width: 167px;
     background-color: #FF1A47;
 }
 
 .secondary:hover {
-    width: 167px;
     background-color: #E5F0FA;
 }
 
