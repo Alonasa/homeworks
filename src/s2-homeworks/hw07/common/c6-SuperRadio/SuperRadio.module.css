@@ -9,7 +9,13 @@
 }
 
 .label {
+    width: 200px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
 }
 
 .options {
+    margin-left: 125px;
 }
