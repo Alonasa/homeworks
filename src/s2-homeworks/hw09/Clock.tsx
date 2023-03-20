@@ -8,11 +8,15 @@ function Clock() {
   // for autotests // не менять // можно подсунуть в локалСторэдж нужную дату, чтоб увидеть как она отображается
   const [date, setDate] = useState<Date>(new Date(restoreState('hw9-date', Date.now())))
   const [show, setShow] = useState<boolean>(false)
+  const [disableTimer, setDisableTimer] = useState<boolean>(false)
+  
   
   
   const start = () => {
 	stop();
-	
+	setDisableTimer(true)
+ 
+ 
 	let getDate = new Date();
 	
 	const currentDate = () => {
@@ -29,6 +33,8 @@ function Clock() {
   
   
   const stop = () => {
+    setTimerId(timerId)
+	setDisableTimer(!disableTimer)
 	// пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
 	
   }
@@ -117,14 +123,14 @@ function Clock() {
 	  <div className={s.buttonsContainer}>
 		<SuperButton
 		  id={'hw9-button-start'}
-		  disabled={false} // пишут студенты // задизэйблить если таймер запущен
+		  disabled={disableTimer} // пишут студенты // задизэйблить если таймер запущен
 		  onClick={start}
 		>
 		  start
 		</SuperButton>
 		<SuperButton
 		  id={'hw9-button-stop'}
-		  disabled={true} // пишут студенты // задизэйблить если таймер не запущен
+		  disabled={!disableTimer} // пишут студенты // задизэйблить если таймер не запущен
 		  onClick={stop}
 		>
 		  stop
