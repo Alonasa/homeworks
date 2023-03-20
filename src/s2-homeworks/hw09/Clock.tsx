@@ -11,17 +11,17 @@ function Clock() {
   
   
   const start = () => {
-	let getDate = new Date();
 	stop();
 	
-	const currentdate = () => {
+	let getDate = new Date();
+	
+	const currentDate = () => {
 	  return getDate
 	}
 	
-	setTimerId(+setInterval(currentdate, 1000))
+	setTimerId(+setInterval(currentDate, 1000))
 	
 	setDate(getDate)
-	return timerId
 	// пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
 	// сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
 	
@@ -42,15 +42,40 @@ function Clock() {
   
   
   const currentTime = () => {
-	let time = `${date.getHours() < 9 ? '0' + date.getHours() : date.getHours()}:${date.getMinutes() < 9 ? '0' + date.getMinutes() : date.getMinutes()}:${date.getSeconds() < 9 ? '0' + date.getSeconds() : date.getSeconds()}`
+	let time = `${date?.getHours() < 9 ? '0' + date.getHours() : date.getHours()}:${date?.getMinutes() < 9 ? '0' + date.getMinutes() : date.getMinutes()}:${date?.getSeconds() < 9 ? '0' + date.getSeconds() : date.getSeconds()}`
 	return time
+  }
+  
+  const currentDay = () => {
+	let day = date?.getDay()
+	switch (day) {
+	  case 1: {
+	    return 'Monday'
+	  }
+	  case 2: {
+		return 'Tuesday'
+	  }
+	  case 3: {
+		return 'Wednesday'
+	  }
+	  case 4: {
+		return 'Thursday'
+	  }
+	  case 5: {
+		return 'Friday'
+	  }
+	  case 6: {
+	    return 'Saturday'
+	  }
+	}
+	return 'Sunday'
   }
   
   const stringTime = currentTime() || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
   const stringDate = 'date->date' || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
   
   // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
-  const stringDay = 'date->day' || <br/> // пишут студенты
+  const stringDay = currentDay() || <br/> // пишут студенты
   const stringMonth = 'date->month' || <br/> // пишут студенты
   
   return (
