@@ -35,9 +35,8 @@ function Clock() {
   const stop = () => {
     setTimerId(undefined)
 	setDisableTimer(!disableTimer)
-	clearInterval(timerId)
+	//clearInterval(timerId)
 	// пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
-	
   }
   
   const onMouseEnter = () => { // пишут студенты // показать дату если наведена мышка
