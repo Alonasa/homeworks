@@ -15,17 +15,9 @@ function Clock() {
   const start = () => {
 	stop();
 	setDisableTimer(true)
- 
- 
-	let getDate = new Date();
+	setTimerId(+setInterval(()=>setDate(new Date()), 1000))
 	
-	const currentDate = () => {
-	  return getDate
-	}
 	
-	setTimerId(+setInterval(currentDate, 1000))
-	
-	setDate(getDate)
 	// пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
 	// сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
 	
@@ -37,7 +29,6 @@ function Clock() {
 	setDisableTimer(!disableTimer)
 	clearInterval(timerId)
 	// пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
-	
   }
   
   const onMouseEnter = () => { // пишут студенты // показать дату если наведена мышка
@@ -78,7 +69,7 @@ function Clock() {
   }
   
   const currentDate = () => {
-    return `${date?.getDay().toString().padStart(2,'0')}.${(date?.getMonth()+1).toString().padStart(2,'0')}.${date?.getFullYear()}`
+    return `${date?.getDate().toString().padStart(2,'0')}.${(date?.getMonth()+1).toString().padStart(2,'0')}.${date?.getFullYear()}`
   }
   
   const currentMonth = () => {
