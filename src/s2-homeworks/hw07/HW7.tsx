@@ -18,35 +18,35 @@ const arr = [
 ] // value может быть изменено
 
 const HW7 = () => {
-    const [value, onChangeOption] = useState(arr[0].value) // селект и радио должны работать синхронно
-
+    const [value, onChangeOption] = useState(1) // селект и радио должны работать синхронно
+    
     return (
-        <div id={'hw7'}>
-            <div className={s2.hwTitle}>Homework #7</div>
-
-            {/*демонстрация возможностей компонент:*/}
-            <div className={s2.hw}>
-                <div className={s.container}>
-                    <div>
-                        <SuperSelect
-                            id={'hw7-super-select'}
-                            options={arr}
-                            value={value}
-                            onChangeOption={onChangeOption}
-                        />
-                    </div>
-                    <div>
-                        <SuperRadio
-                            id={'hw7-super-radio'}
-                            name={'hw7-radio'}
-                            options={arr}
-                            value={value}
-                            onChangeOption={onChangeOption}
-                        />
-                    </div>
-                </div>
-            </div>
-        </div>
+      <div id={'hw7'}>
+          <div className={s2.hwTitle}>Homework #7</div>
+          
+          {/*демонстрация возможностей компонент:*/}
+          <div className={s2.hw}>
+              <div className={s.container}>
+                  <div>
+                      <SuperSelect
+                        id={'hw7-super-select'}
+                        options={arr}
+                        value={value}
+                        onChangeOption={onChangeOption}
+                      />
+                  </div>
+                  <div>
+                      <SuperRadio
+                        id={'hw7-super-radio'}
+                        name={'hw7-radio'}
+                        options={arr}
+                        value={value}
+                        onChangeOption={onChangeOption}
+                      />
+                  </div>
+              </div>
+          </div>
+      </div>
     )
 }
 
