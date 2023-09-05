@@ -22,7 +22,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #FFFFFF;
+    background: #FFFFFF;
     z-index: 100;
     position: absolute;
 }
