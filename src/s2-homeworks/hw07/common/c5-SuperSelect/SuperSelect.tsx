@@ -1,25 +1,21 @@
 import React, {
-    SelectHTMLAttributes,
-    DetailedHTMLProps,
-    ChangeEvent,
+  SelectHTMLAttributes,
+  DetailedHTMLProps,
+  ChangeEvent,
 } from 'react'
 import s from './SuperSelect.module.css'
-import {MenuItem, Select, SelectChangeEvent, SelectProps} from '@mui/material';
 
 type DefaultSelectPropsType = DetailedHTMLProps<
-    SelectHTMLAttributes<HTMLSelectElement>,
-    HTMLSelectElement
->
+  SelectHTMLAttributes<HTMLSelectElement>,
+  HTMLSelectElement
+  >
 
 type SuperSelectPropsType = DefaultSelectPropsType & {
-    options?: any[]
-    onChangeOption?: (option: any) => void
-    value? :  any
-    id: string
+  options?: any[]
+  onChangeOption?: (option: any) => void
 }
 
 const SuperSelect: React.FC<SuperSelectPropsType> = ({
-    
                                                        options,
     className,
     onChange,
@@ -47,19 +43,17 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
     }
 
     const finalSelectClassName = s.select + (className ? ' ' + className : '')
+
   
   return (
-            <Select
-              className={finalSelectClassName}
-              onChange={onChangeCallback}
-              id={id}
-              value={value}
-              style={{padding: '0'}}
-              size={'small'}
-            >
-                {mappedOptions}
-            </Select>
-    )
+    <select
+      className={finalSelectClassName}
+      onChange={onChangeCallback}
+      {...restProps}
+    >
+      {mappedOptions}
+    </select>
+  )
 }
 
 export default SuperSelect
