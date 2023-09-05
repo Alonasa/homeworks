@@ -6,7 +6,7 @@ export const StyledSlider = styled(Slider)(({ theme }) => ({
   '& .MuiSlider-rail':{
     color: "lightgray"
   },
-  '& .MuiSlider-thumb': {
+  '.MuiSlider-thumb': {
     height: 15,
     width: 15,
     boxShadow: '0 0 0 7px white, 0 0 0 8px green, 0 0 0 9px yellow, 0 0 0 10px green',
